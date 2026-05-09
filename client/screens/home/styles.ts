@@ -1,0 +1,362 @@
+import { StyleSheet } from 'react-native';
+import { Spacing, BorderRadius, Theme } from '@/constants/theme';
+
+export const createStyles = (theme: Theme) => {
+  return StyleSheet.create({
+    scrollContent: {
+      flexGrow: 1,
+      paddingHorizontal: Spacing.lg,
+      paddingTop: Spacing['3xl'],
+      paddingBottom: Spacing['5xl'],
+    },
+    header: {
+      alignItems: 'center',
+      marginBottom: Spacing['2xl'],
+    },
+    avatarContainer: {
+      marginBottom: Spacing.lg,
+    },
+    avatar: {
+      width: 80,
+      height: 80,
+      borderRadius: 40,
+      justifyContent: 'center',
+      alignItems: 'center',
+      shadowColor: '#6C63FF',
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.3,
+      shadowRadius: 8,
+      elevation: 8,
+    },
+    greeting: {
+      marginBottom: Spacing.xs,
+    },
+    subtitle: {
+      textAlign: 'center',
+      paddingHorizontal: Spacing.lg,
+    },
+    // 会员状态卡片
+    premiumCard: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      gap: Spacing.xs,
+      backgroundColor: 'rgba(255,107,107,0.1)',
+      paddingHorizontal: Spacing.md,
+      paddingVertical: Spacing.xs,
+      borderRadius: BorderRadius.full,
+      marginTop: Spacing.md,
+    },
+    // 剩余次数卡片
+    usageCard: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: theme.backgroundDefault,
+      borderRadius: BorderRadius.lg,
+      paddingHorizontal: Spacing.md,
+      paddingVertical: Spacing.sm,
+      marginTop: Spacing.md,
+      shadowColor: theme.shadowDark,
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.1,
+      shadowRadius: 4,
+      elevation: 2,
+    },
+    usageItem: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      gap: Spacing.xs,
+    },
+    usageDivider: {
+      width: 1,
+      height: 20,
+      backgroundColor: theme.border,
+      marginHorizontal: Spacing.md,
+    },
+    upgradeHint: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      gap: 4,
+      marginLeft: Spacing.sm,
+      paddingLeft: Spacing.sm,
+      borderLeftWidth: 1,
+      borderLeftColor: theme.border,
+      flexShrink: 1, // 防止溢出
+    },
+    // API Key提示
+    apiKeyHint: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      gap: Spacing.xs,
+      backgroundColor: 'rgba(5,150,105,0.1)',
+      paddingHorizontal: Spacing.md,
+      paddingVertical: Spacing.xs,
+      borderRadius: BorderRadius.full,
+      marginTop: Spacing.md,
+    },
+    // 模式切换
+    modeSwitchContainer: {
+      flexDirection: 'row',
+      backgroundColor: theme.backgroundTertiary,
+      borderRadius: BorderRadius.lg,
+      padding: Spacing.xs,
+      marginBottom: Spacing.lg,
+    },
+    modeButton: {
+      flex: 1,
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: Spacing.xs,
+      paddingVertical: Spacing.md,
+      borderRadius: BorderRadius.md,
+    },
+    modeButtonActive: {
+      backgroundColor: theme.primary,
+    },
+    // URL输入卡片
+    urlInputCard: {
+      backgroundColor: theme.backgroundDefault,
+      borderRadius: BorderRadius.xl,
+      padding: Spacing.lg,
+      marginBottom: Spacing.lg,
+      shadowColor: theme.shadowDark,
+      shadowOffset: { width: 6, height: 6 },
+      shadowOpacity: 0.7,
+      shadowRadius: 8,
+      elevation: 6,
+      borderWidth: 1,
+      borderColor: 'rgba(255,255,255,0.5)',
+    },
+    sectionTitle: {
+      marginBottom: Spacing.md,
+    },
+    urlInputRow: {
+      flexDirection: 'row',
+      gap: Spacing.sm,
+    },
+    urlInput: {
+      flex: 1,
+      backgroundColor: theme.backgroundTertiary,
+      borderRadius: BorderRadius.lg,
+      borderWidth: 1,
+      borderColor: 'rgba(255,255,255,0.6)',
+      paddingHorizontal: Spacing.md,
+      paddingVertical: Spacing.md,
+      fontSize: 15,
+      color: theme.textPrimary,
+    },
+    fetchButton: {
+      backgroundColor: theme.primary,
+      width: 48,
+      height: 48,
+      borderRadius: BorderRadius.lg,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    fetchedInfo: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      gap: Spacing.xs,
+      marginTop: Spacing.md,
+    },
+    // 文本输入卡片
+    inputCard: {
+      backgroundColor: theme.backgroundDefault,
+      borderRadius: BorderRadius.xl,
+      padding: Spacing.lg,
+      marginBottom: Spacing.lg,
+      shadowColor: theme.shadowDark,
+      shadowOffset: { width: 6, height: 6 },
+      shadowOpacity: 0.7,
+      shadowRadius: 8,
+      elevation: 6,
+      borderWidth: 1,
+      borderColor: 'rgba(255,255,255,0.5)',
+    },
+    inputCardHighlight: {
+      borderColor: theme.primary,
+      borderWidth: 2,
+      shadowColor: theme.primary,
+      shadowOpacity: 0.4,
+    },
+    inputCardHeader: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      marginBottom: Spacing.md,
+    },
+    // 朗读状态徽章
+    readingBadge: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      gap: Spacing.xs,
+      backgroundColor: theme.primary,
+      paddingHorizontal: Spacing.md,
+      paddingVertical: Spacing.xs,
+      borderRadius: BorderRadius.full,
+    },
+    readingBadgeText: {
+      marginLeft: Spacing.xs,
+    },
+    readingBadgeSmall: {
+      backgroundColor: theme.primary,
+      paddingHorizontal: Spacing.sm,
+      paddingVertical: 2,
+      borderRadius: BorderRadius.full,
+      marginLeft: 'auto',
+    },
+    textAreaContainer: {
+      backgroundColor: theme.backgroundTertiary,
+      borderRadius: BorderRadius.lg,
+      borderWidth: 1,
+      borderColor: 'rgba(255,255,255,0.6)',
+      padding: Spacing.md,
+    },
+    textAreaHighlight: {
+      backgroundColor: 'rgba(108,99,255,0.08)',
+      borderColor: theme.primary,
+    },
+    textArea: {
+      fontSize: 16,
+      lineHeight: 24,
+      color: theme.textPrimary,
+      minHeight: 150,
+    },
+    // 高亮文本容器
+    highlightedTextContainer: {
+      minHeight: 150,
+    },
+    sentenceText: {
+      fontSize: 16,
+      lineHeight: 26,
+      color: theme.textPrimary,
+    },
+    sentenceTextRead: {
+      backgroundColor: 'rgba(59, 130, 246, 0.15)', // 蓝色背景
+      color: theme.textPrimary,
+    },
+    sentenceTextCurrent: {
+      backgroundColor: 'rgba(108, 99, 255, 0.2)', // 当前朗读的句子用紫色背景
+      fontWeight: '500',
+    },
+    charCount: {
+      alignItems: 'flex-end',
+      marginTop: Spacing.sm,
+    },
+    actionContainer: {
+      flexDirection: 'row',
+      gap: Spacing.md,
+      marginBottom: Spacing.lg,
+    },
+    actionButton: {
+      flex: 1,
+    },
+    buttonGradient: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingVertical: Spacing.lg,
+      borderRadius: BorderRadius.full,
+      gap: Spacing.sm,
+      shadowColor: '#6C63FF',
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.3,
+      shadowRadius: 8,
+      elevation: 6,
+    },
+    buttonText: {
+      marginLeft: Spacing.xs,
+    },
+    playingCard: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      backgroundColor: theme.backgroundDefault,
+      borderRadius: BorderRadius.xl,
+      padding: Spacing.lg,
+      marginBottom: Spacing.lg,
+      shadowColor: theme.shadowDark,
+      shadowOffset: { width: 4, height: 4 },
+      shadowOpacity: 0.5,
+      shadowRadius: 6,
+      elevation: 4,
+      borderWidth: 1,
+      borderColor: 'rgba(255,255,255,0.5)',
+    },
+    playingHeader: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      gap: Spacing.sm,
+    },
+    playingText: {
+      marginLeft: Spacing.xs,
+    },
+    stopButton: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      gap: Spacing.xs,
+      padding: Spacing.sm,
+    },
+    summaryCard: {
+      backgroundColor: theme.backgroundDefault,
+      borderRadius: BorderRadius.xl,
+      padding: Spacing.lg,
+      marginBottom: Spacing.lg,
+      shadowColor: theme.shadowDark,
+      shadowOffset: { width: 4, height: 4 },
+      shadowOpacity: 0.5,
+      shadowRadius: 6,
+      elevation: 4,
+      borderWidth: 1,
+      borderColor: 'rgba(255,255,255,0.5)',
+    },
+    summaryCardHighlight: {
+      borderColor: theme.primary,
+      borderWidth: 2,
+      shadowColor: theme.primary,
+      shadowOpacity: 0.4,
+    },
+    summaryHeader: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      marginBottom: Spacing.md,
+    },
+    summaryTitle: {
+      marginLeft: Spacing.sm,
+    },
+    summaryText: {
+      lineHeight: 24,
+    },
+    errorCard: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: 'rgba(255,107,107,0.1)',
+      borderRadius: BorderRadius.lg,
+      padding: Spacing.md,
+      marginBottom: Spacing.lg,
+      gap: Spacing.sm,
+    },
+    errorText: {
+      flex: 1,
+    },
+    tipCard: {
+      flexDirection: 'row',
+      alignItems: 'flex-start',
+      backgroundColor: 'rgba(108,99,255,0.08)',
+      borderRadius: BorderRadius.lg,
+      padding: Spacing.md,
+      gap: Spacing.md,
+    },
+    tipIconContainer: {
+      width: 36,
+      height: 36,
+      borderRadius: 18,
+      backgroundColor: 'rgba(108,99,255,0.15)',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    tipContent: {
+      flex: 1,
+    },
+  });
+};
