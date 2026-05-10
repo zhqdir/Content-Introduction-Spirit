@@ -1,0 +1,37 @@
+{
+  "cli": {
+    "version": ">= 10.0.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_BACKEND_BASE_URL": "https://41f8a331-7000-46f0-9157-2d6d2b94d657.dev.coze.site"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_BACKEND_BASE_URL": "https://41f8a331-7000-46f0-9157-2d6d2b94d657.dev.coze.site"
+      }
+    },
+    "production": {
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_BACKEND_BASE_URL": "https://41f8a331-7000-46f0-9157-2d6d2b94d657.dev.coze.site"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
